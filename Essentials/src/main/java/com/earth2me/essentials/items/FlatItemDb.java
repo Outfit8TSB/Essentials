@@ -224,7 +224,8 @@ public class FlatItemDb extends AbstractItemDb {
     public static class ItemData {
         private Material material;
         private String[] fallbacks = null;
-        private PotionMetaProvider.AbstractPotionData potionData = null;
+        // todo unfuck all of this
+        //private PotionMetaProvider.AbstractPotionData potionData = null;
         private EntityType entity = null;
 
         ItemData(final Material material) {
@@ -233,7 +234,7 @@ public class FlatItemDb extends AbstractItemDb {
 
         ItemData(final Material material, final PotionMetaProvider.AbstractPotionData potionData) {
             this.material = material;
-            this.potionData = potionData;
+            //this.potionData = potionData;
         }
 
         ItemData(final Material material, final EntityType entity) {
@@ -243,7 +244,8 @@ public class FlatItemDb extends AbstractItemDb {
 
         @Override
         public int hashCode() {
-            return (31 * material.hashCode()) ^ potionData.hashCode();
+            return 31 * material.hashCode();
+            //return (31 * material.hashCode()) ^ potionData.hashCode();
         }
 
         @Override
@@ -268,7 +270,8 @@ public class FlatItemDb extends AbstractItemDb {
         }
 
         public PotionMetaProvider.AbstractPotionData getPotionData() {
-            return this.potionData;
+            return null;
+            //return this.potionData;
         }
 
         public EntityType getEntity() {
@@ -276,6 +279,8 @@ public class FlatItemDb extends AbstractItemDb {
         }
 
         private boolean potionDataEquals(final ItemData o) {
+            return true;
+            /*
             if (this.potionData == null && o.getPotionData() == null) {
                 return true;
             } else if (this.potionData != null && o.getPotionData() != null) {
@@ -283,6 +288,7 @@ public class FlatItemDb extends AbstractItemDb {
             } else {
                 return false;
             }
+             */
         }
 
         private boolean entityEquals(final ItemData o) {
