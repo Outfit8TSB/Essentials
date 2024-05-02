@@ -209,6 +209,15 @@ public enum MobData {
     OAK_BOAT("oak", Boat.class, MobCompat.BoatVariant.OAK, true),
     SPRUCE_BOAT("spruce", Boat.class, MobCompat.BoatVariant.SPRUCE, true),
     SADDLE_CAMEL("saddle", MobCompat.CAMEL, Data.CAMELSADDLE, true),
+    PALE_WOLF("pale", EntityType.WOLF, "wolf:PALE", true),
+    SPOTTED_WOLF("spotted", EntityType.WOLF, "wolf:PALE", true),
+    SNOWY_WOLF("snowy", EntityType.WOLF, "wolf:PALE", true),
+    BLACK_WOLF("black", EntityType.WOLF, "wolf:BLACK", true),
+    ASHEN_WOLF("ashen", EntityType.WOLF, "wolf:ASHEN", true),
+    RUSTY_WOLF("rusty", EntityType.WOLF, "wolf:RUSTY", true),
+    WOODS_WOLF("woods", EntityType.WOLF, "wolf:WOODS", true),
+    CHESTNUT_WOLF("chestnut", EntityType.WOLF, "wolf:CHESTNUT", true),
+    STRIPED_WOLF("striped", EntityType.WOLF, "wolf:STRIPED", true),
     ;
 
     final private String nickname;
@@ -423,6 +432,9 @@ public enum MobData {
                     break;
                 case "frog":
                     MobCompat.setFrogVariant(spawned, split[1]);
+                    break;
+                case "wolf":
+                    MobCompat.setWolfVariant(spawned, split[1]);
                     break;
             }
         } else {

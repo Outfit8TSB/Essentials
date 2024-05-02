@@ -1,6 +1,7 @@
 package com.earth2me.essentials;
 
 import com.earth2me.essentials.utils.EnumUtil;
+import com.earth2me.essentials.utils.RegistryUtil;
 import com.earth2me.essentials.utils.VersionUtil;
 import net.ess3.nms.refl.ReflUtil;
 import org.bukkit.Material;
@@ -20,6 +21,7 @@ import org.bukkit.entity.Parrot;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.TropicalFish;
 import org.bukkit.entity.Villager;
+import org.bukkit.entity.Wolf;
 import org.bukkit.inventory.ItemStack;
 
 import java.lang.reflect.Method;
@@ -219,6 +221,18 @@ public final class MobCompat {
             camel.setTamed(true);
             camel.setOwner(target);
             camel.getInventory().setSaddle(new ItemStack(Material.SADDLE, 1));
+        }
+    }
+
+    public static void setWolfVariant(final Entity entity, final String variant) {
+        if (VersionUtil.getServerBukkitVersion().isLowerThan(VersionUtil.v1_20_6_R01)) {
+            return;
+        }
+
+        if (entity instanceof Wolf) {
+            final Wolf wolf = (Wolf) entity;
+            //noinspection DataFlowIssue
+            wolf.setVariant(RegistryUtil.valueOf(Wolf.Variant.class, variant));
         }
     }
 
