@@ -23,7 +23,7 @@ Essentials or Spigot-Essentials. [For more details, see the wiki.](https://essen
 If you're coming from the original Essentials plugin, EssentialsX is a drop-in replacement for Essentials. It does,
 however, have some new requirements:
 
-* **EssentialsX requires CraftBukkit, Spigot or Paper to run.** Other server software may work, but these are not tested
+* **EssentialsX requires CraftBukkit, Spigot, Paper or Sponge, Neoforge, Forge(These APIS Require 2.22.2+) to run.** Other server software may work, but these are not tested
   by the team and we may not be able to help with any issues that occur.
 * **EssentialsX currently supports Minecraft versions 1.8.8, 1.9.4, 1.10.2, 1.11.2, 1.12.2, 1.13.2, 1.14.4, 1.15.2, 
   1.16.5, 1.17.1, 1.18.2, 1.19.4, 1.20.6, and 1.21.**
@@ -66,10 +66,13 @@ Note the `:` - without it, you will run several servers at once, which will like
 
 ## Using EssentialsX in your plugin
 
-Do you want to integrate with EssentialsX in your plugin? You can build your plugin against the **EssentialsX API**,
-available from the EssentialsX Maven repo.
+Do you want to integrate with EssentialsX in your plugin? You can build your plugin against the **EssentialsX API and Bssentials API**,
+available from the EssentialsX & Bssentials Maven repo.
 
-Releases are hosted on the Maven repo at `https://repo.essentialsx.net/releases/`, while snapshots (including dev
+Essentials Releases are hosted on the Maven repo at `https://repo.essentialsx.net/releases/`, while snapshots (including dev
+builds) are hosted at `https://repo.essentialsx.net/snapshots/`.
+
+Bssentials Releases are hosted on the Maven repo at `https://repo.essentialsx.net/releases/`, while snapshots (including dev
 builds) are hosted at `https://repo.essentialsx.net/snapshots/`.
 
 To add EssentialsX to your build system, you should use the following artifacts:
@@ -77,7 +80,7 @@ To add EssentialsX to your build system, you should use the following artifacts:
 | Type           | Group ID          | Artifact ID   | Version           |
 |:---------------|:------------------|:--------------|:------------------|
 | Latest release | `net.essentialsx` | `EssentialsX` | `2.20.1`          |
-| Snapshots      | `net.essentialsx` | `EssentialsX` | `2.21.0-SNAPSHOT` |
+| Snapshots      | `net.essentialsx` | `EssentialsX` | `2.22.2-SNAPSHOT` |
 | Older releases | `net.ess3`        | `EssentialsX` | `2.18.2`          |
 
 Note: until version `2.18.2`, EssentialsX used the `net.ess3` group ID.  
