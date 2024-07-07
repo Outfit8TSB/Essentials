@@ -2,6 +2,13 @@ plugins {
     id("essentials.module-conventions")
 }
 
+repositories {
+    maven {
+        url 'http://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
 dependencies {
     compileOnly project(':EssentialsX')
+    compileOnly 'me.clip:placeholderapi:latest'
 }
