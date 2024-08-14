@@ -23,7 +23,7 @@ Essentials or Spigot-Essentials. [For more details, see the wiki.](https://essen
 If you're coming from the original Essentials plugin, EssentialsX is a drop-in replacement for Essentials. It does,
 however, have some new requirements:
 
-* **EssentialsX requires CraftBukkit, Spigot, Paper or Sponge, Neoforge, Forge(These APIS Require 2.22.2+) to run.** Other server software may work, but these are not tested
+* **EssentialsX requires CraftBukkit, Spigot, Paper or Sponge, Neoforge, Forge, Fabric, Quilt(These APIS Require 2.22.2+) to run.** Other server software may work, but these are not tested
   by the team and we may not be able to help with any issues that occur.
 * **EssentialsX currently supports Minecraft versions 1.8.8, 1.9.4, 1.10.2, 1.11.2, 1.12.2, 1.13.2, 1.14.4, 1.15.2, 
   1.16.5, 1.17.1, 1.18.2, 1.19.4, 1.20.6, and 1.21.1.**
